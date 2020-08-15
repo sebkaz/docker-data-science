@@ -8,7 +8,7 @@ RUN apt-get update && yes | apt-get upgrade
 RUN apt-get install -y python3 python3-pip git 
 # test for python
 RUN mkdir -p test
-RUN pip3 install jupyter pandas numpy matplotlib
+RUN pip3 install jupyter pandas numpy matplotlib sklearn
 
 
 # Configuring access to Jupyter
