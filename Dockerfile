@@ -23,7 +23,7 @@ ENTRYPOINT ["/usr/bin/tini", "--"]
 EXPOSE 8888
 
 # Run Jupyter notebook as Docker main process
-CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/notebooks", "--ip='*'", "--port=8888", "--no-browser", "--NotebookApp.token=''"]
+CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/notebooks", "--ip='*'", "--port=8888", "--no-browser"]
 
 # Run Jupyter notebook  without password - not recomended !!!
 #CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/notebooks", "--ip='*'", "--port=8888", "--no-browser", "--NotebookApp.token=''"]
