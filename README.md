@@ -1,11 +1,14 @@
 # docker-data-science
-Docker with python3 and jupyter notebook
+Docker with python3 and jupyter notebook - slim version
 
 ## Run 
-mkdir notebooks (or differ dir for your notebooks)
-docker -run --name docker-data-science -p 8888:8888 -v "notebooks:opt/notebooks" -d docker-data-science
 
-go to localhost:8888
+docker run -d -p 8888:8888 -v "<full path to your folder>:/notebooks" sebkaz/docker-data-science
+
+go to http://localhost:8888
 
 ## stop
-docker -rm -f docker-data-science
+docker ps 
+<get id from sebkaz/docker-data-science>
+docker stop <id>
+docker -rm -f sebkaz/docker-data-science
