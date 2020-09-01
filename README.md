@@ -8,7 +8,11 @@ docker run -d -p 8888:8888 -v "full_path_to_your_folder:/notebooks" sebkaz/docke
 go to http://localhost:8888
 
 ## stop
+
 docker ps 
+
 get id from sebkaz/docker-data-science
+
 docker stop id
+
 docker -rm -f sebkaz/docker-data-science
