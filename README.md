@@ -15,4 +15,4 @@ get id from sebkaz/docker-data-science
 
 docker stop id
 
-docker -rm -f sebkaz/docker-data-science
+docker rm -f sebkaz/docker-data-science
