@@ -1,6 +1,6 @@
 # jupyter notebook without ubuntu
 
-FROM python:3.6-slim
+FROM python:3.8-slim
 
 RUN pip install jupyter pandas numpy matplotlib sklearn
 
