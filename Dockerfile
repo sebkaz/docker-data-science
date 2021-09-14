@@ -3,9 +3,7 @@ LABEL maintainer="Sebastian Zajac <sebastian.zajac@sgh.waw.pl>"
 
 FROM python:3.8-slim-buster
 
-
-
-WORKDIR /app/
+WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
