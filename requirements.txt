@@ -1,0 +1,11 @@
+jupyter
+ipython 
+pandas
+numpy
+matplotlib
+sklearn
+scipy
+sympy
+nose
+tensorflow
+torch
