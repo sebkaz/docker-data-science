@@ -1,9 +1,13 @@
 # jupyter notebook without ubuntu
+LABEL maintainer="Sebastian Zajac <sebastian.zajac@sgh.waw.pl>"
 
-FROM python:3.8-slim
+FROM python:3.8-slim-buster
 
-RUN pip install jupyter pandas numpy matplotlib sklearn
 
+
+WORKDIR /app/
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
 
 # Configuring access to Jupyter
 WORKDIR /notebooks/
@@ -24,6 +28,3 @@ EXPOSE 8888
 
 # Run Jupyter notebook as Docker main process
 CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/notebooks", "--ip='*'", "--port=8888", "--no-browser"]
-
-# Run Jupyter notebook  without password - not recomended !!!
-#CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/notebooks", "--ip='*'", "--port=8888", "--no-browser", "--NotebookApp.token=''"]
