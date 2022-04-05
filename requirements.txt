@@ -7,5 +7,6 @@ sklearn
 scipy
 sympy
 nose
+sqlalchemy
 tensorflow
 torch
