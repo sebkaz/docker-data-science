@@ -1,4 +1,7 @@
 jupyter
+tensorflow
+torch
+keras
 ipython 
 pandas
 numpy
@@ -8,5 +11,4 @@ scipy
 sympy
 nose
 sqlalchemy
-tensorflow
-torch
+
