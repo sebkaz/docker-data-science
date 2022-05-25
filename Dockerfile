@@ -1,12 +1,9 @@
-# jupyter notebook without ubuntu
-LABEL maintainer="Sebastian Zajac <sebastian.zajac@sgh.waw.pl>"
-
 FROM python:3.8-slim-buster
 
 WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip install --upgrade pip setuptools
-RUN pip install -r requirements.txt
+RUN pip --no-cache-dir install -r requirements.txt
 
 # Configuring access to Jupyter
 WORKDIR /notebooks/
@@ -26,4 +23,4 @@ ENTRYPOINT ["/usr/bin/tini", "--"]
 EXPOSE 8888
 
 # Run Jupyter notebook as Docker main process
-CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/notebooks", "--ip='*'", "--port=8888", "--no-browser"]
+CMD ["jupyter", "notebook", "--allow-root", "--notebook-dir=/notebooks", "--ip='*'", "--port=8888", "--no-browser", "--NotebookApp.token=''"]
