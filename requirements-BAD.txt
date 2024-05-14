@@ -1,0 +1,14 @@
+jupyter
+tensorflow
+torch
+keras
+ipython 
+pandas
+numpy
+matplotlib
+sklearn
+scipy
+sympy
+nose
+sqlalchemy
+
